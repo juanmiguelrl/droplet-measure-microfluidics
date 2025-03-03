@@ -1,0 +1,10 @@
+input=example/input
+output=example/output
+calc_circles=True
+get_measure=True
+measure_distance=1000
+useDefaultScale=True
+scale_path=example/escala/Escala 2x.tif
+joid_data=True
+onlyOne=False
+sampleNum=0
