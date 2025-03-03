@@ -1,3 +1,11 @@
+<!-- filepath: /G:/droplet notebook/droplet-measure-microfluidics/README.md -->
+# Droplet (circle) Image Measurement Tool  
+
+<p align="center">
+  <a href="#english"><img src="https://img.shields.io/badge/Language-English-blue" alt="English"></a>
+  <a href="#español"><img src="https://img.shields.io/badge/Language-Español-red" alt="Español"></a>
+</p>
+
 ## English
 This program allows the detection and measurement of circle diameters in images, returning the processed images with the detected circles drawn on them and .csv files containing a list of data for all detected circles.
 
