@@ -19,6 +19,17 @@ from tkinter import *
 # Define el número máximo de procesos a utilizar
 MAX_PROCESSES = 16
 
+# Function to highlight matched text in search results
+# Función para resaltar el texto coincidente en los resultados de búsqueda
+def highlight_match(text, pattern, flags=0):
+    """Highlights the matched portion of text using ANSI color codes."""
+    match = re.search(pattern, text, flags)
+    if match:
+        start, end = match.span()
+        highlighted = text[:start] + '\033[93m' + text[start:end] + '\033[0m' + text[end:]
+        return highlighted
+    return text
+
 #default pixel size
 DEFAULT_PIXED_SIZE = None
 
@@ -248,7 +259,7 @@ def processDir(inputDir,originalInputDir, outputDir,calcCircles,measure_distance
                                 # checks if get_measure is true and if the image contains the word "scale"
                                 #comprueba si get_measure es verdadero y si la imagen contiene la palabra "scale"
                                 if re.search(r'scale|escala', file, re.IGNORECASE):
-                                    print("Scale detected: " + file)
+                                    print("Scale detected: " + highlight_match(file, r'scale|escala', re.IGNORECASE))
                                     scaleFile = file
                                     pass
                                 elif calcCircles:
